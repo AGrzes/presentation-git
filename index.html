@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Git Crash Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+</head>
+
+<body>
+
+    <div>
+        <div id="git">
+            <h1>Git</h1>
+            <p>Distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows.</p>
+        </div>
+        <div id="background">
+            <h1>Background</h1>
+            <ul>
+                <li>Created by Linus Torvalds and linux kernel developers in 2005 </li>
+                <li>Maintained by community</li>
+                <li><a href="https://opensource.org/licenses/MIT">MIT</a> license</li>
+            </ul>
+        </div>
+        <div id="advantages">
+            <h1>Advantages</h1>
+            <p>Content</p>
+            <ul>
+                <li>Distributed</li>
+                <li>Fast</li>
+                <li>Open Source</li>
+                <li>Easy branching and merging</li>
+                <li>Ensures content and history integrity</li>
+                <li>Popular</li>
+            </ul>
+        </div>
+        <div id="distributed">
+            <h1>Distributed</h1>
+            <ul>
+                <li>No need for central server</li>
+                <li>Everyone have a full backup copy of history</li>
+                <li>Easy offline work</li>
+                <li>Various workflows possible</li>
+            </ul>
+        </div>
+        <div id="usage">
+            <h1>Usage</h1>
+            <ul>
+                <li>Local version tracking</li>
+                <li>Team collaboration</li>
+                <li>Advanced propagation workflows</li>
+                <li>Automation</li>
+                <li>Cloud deployment</li>
+            </ul>
+        </div>
+        <div id="caevats">
+            <h1>Caveats</h1>
+            <ul>
+                <li>Binary file handling</li>
+                <li>Coarse grained security</li>
+                <li>No locking</li>
+            </ul>
+        </div>
+        <div id="basic_terms">
+            <h1>Basic Terms</h1>
+            <ul>
+                <li>Repository - a structure tracking version history</li>
+                <li>Work Tree - local directory when work is performed</li>
+                <li>Index / Staging Area - a group of changes prepared for next commit</li>
+                <li>Commit - a snapshot of work tree with metadata and referencing ancestors or an operation og creaticn such snapshot</li>
+                <li>Reference - pointer to a commit</li>
+                <li>Branch - pointer to last commit in the work stream</li>
+                <li>Tag - optionally signed pointer to a commit</li>
+                <li>HEAD - pointer to the tip of current branch</li>
+                <li>Remote - reference to another repository</li>
+                <li>Pull - operation of getting changes from another repository </li>
+                <li>Push - operation of putting changes to another repository </li>
+            </ul>
+        </div>
+        <div id="config">
+            <h1><a href="https://git-scm.com/docs/git-config">Config</a></h1>
+            <p>Get and set repository or global options</p>
+            <p>Scopes: system, global and local</p>
+        </div>
+        <div id="clone">
+            <h1><a href="https://git-scm.com/docs/git-clone">Clone</a></h1>
+            <p>Clone a repository into a new directory</p>
+        </div>
+        <div id="init">
+            <h1><a href="https://git-scm.com/docs/git-init">Init</a></h1>
+            <p>Create an empty Git repository or reinitialize an existing one</p>
+            <ul>
+                <li>--bare - create bare repository - without working directory</li>
+            </ul>
+        </div>
+        <div id="add">
+            <h1><a href="https://git-scm.com/docs/git-add">Add</a></h1>
+            <p>Add file contents to the index</p>
+            <ul>
+                <li>--patch - select changes to add</li>
+            </ul>
+        </div>
+        <div id="rm">
+            <h1><a href="https://git-scm.com/docs/git-rm">Rm</a></h1>
+            <p>Remove files from the working tree and from the index</p>
+        </div>
+        <div id="mv">
+            <h1><a href="https://git-scm.com/docs/git-mv">Mv</a></h1>
+            <p>Move or rename a file, a directory, or a symlink</p>
+        </div>
+        <div id="commit">
+            <h1><a href="https://git-scm.com/docs/git-commit">Commit</a></h1>
+            <p>Record changes to the repository</p>
+            <ul>
+                <li>-m - set commit message inline</li>
+                <li>--amend - replace last commit with new commit</li>
+            </ul>
+        </div>
+        <div id="push">
+            <h1><a href="https://git-scm.com/docs/git-push">Push</a></h1>
+            <p>Update remote refs along with associated objects</p>
+            <ul>
+                <li>--force - rewrite remote history</li>
+            </ul>
+        </div>
+        <div id="pull">
+            <h1><a href="https://git-scm.com/docs/git-pull">Pull</a></h1>
+            <p>Fetch from and integrate with another repository or a local branch</p>
+            <ul>
+                <li>--ff-only - abort when not fast forward</li>
+                <li>--rebase - rebase current branch onto incoming changes</li>
+            </ul>
+        </div>
+        <div id="fetch">
+            <h1><a href="https://git-scm.com/docs/git-fetch">Fetch</a></h1>
+            <p>Download objects and refs from another repository</p>
+        </div>
+        <div id="merge">
+            <h1><a href="https://git-scm.com/docs/git-merge">Merge</a></h1>
+            <p>Join two or more development histories together</p>
+            <ul>
+                <li>--ff-only - perform merge only if it is fast forward</li>
+            </ul>
+        </div>
+        <div id="rebase">
+            <h1><a href="https://git-scm.com/docs/git-rebase">Rebase</a></h1>
+            <p>Reapply commits on top of another base tip</p>
+        </div>
+        <div id="reset">
+            <h1><a href="https://git-scm.com/docs/git-reset">Reset</a></h1>
+            <p>Reset current HEAD to the specified state</p>
+        </div>
+        <div id="remote">
+            <h1><a href="https://git-scm.com/docs/git-remote">Remote</a></h1>
+            <p>Manage set of tracked repositories</p>
+        </div>
+        <div id="branch">
+            <h1><a href="https://git-scm.com/docs/git-branch">Branch</a></h1>
+            <p>List, create, or delete branches</p>
+        </div>
+        <div id="checkout">
+            <h1><a href="https://git-scm.com/docs/git-checkout">Checkout</a></h1>
+            <p>Switch branches or restore working tree files</p>
+        </div>
+        <div id="log">
+            <h1><a href="https://git-scm.com/docs/git-log">Log</a></h1>
+            <p>Show commit logs</p>
+            <ul>
+                <li>--oneline - single line commit messages</li>
+                <li>--graph - Draw history graph</li>
+                <li>--decorate - Show refs on commits</li>
+            </ul>
+        </div>
+        <div id="status">
+            <h1><a href="https://git-scm.com/docs/git-status">Status</a></h1>
+            <p>Show the working tree status</p>
+        </div>
+        <div id="diff">
+            <h1><a href="https://git-scm.com/docs/git-diff">Diff</a></h1>
+            <p>Show changes between commits, commit and working tree, etc</p>
+        </div>
+    </div>
+    <div id="object">
+        <h1>Object</h1>
+        <p>A chunk of data stored by git identified by hash </p>
+        <ul>
+            <li>Blob - file content snapshoot</li>
+            <li>Tree - a file structure snapshoot referencing blobs</li>
+            <li>Commit - commit metadata referencing a tree</li>
+            <li>Tag - A reference to commit</li>
+        </ul>
+    </div>
+
+    <div id="protocols">
+        <h1>Protocols</h1>
+        <ul>
+            <li>Local</li>
+            <li>Dumb Http</li>
+            <li>Smart Http</li>
+            <li>SSH</li>
+            <li>Git</li>
+        </ul>
+    </div>
+
+    <div id="protocols-dumb-http">
+        <h1>Dumb Http</h1>
+        <ul>
+            <li>Enable default post-update hook</li>
+            <li>Serve repo from HTTP server</li>
+            <li>Read Only</li>
+
+        </ul>
+    </div>
+
+    <div id="protocols-smart-http">
+        <h1>Smart Http</h1>
+        <p>Content</p>
+        <ul>
+            <li>CGI Based</li>
+            <li>Read / Write</li>
+        </ul>
+    </div>
+
+    <div id="protocols-ssh">
+        <h1>SSH</h1>
+        <ul>
+            <li>Give user SSH access to server with repository</li>
+            <li>Read / Write</li>
+        </ul>
+    </div>
+    <div id="protocols-git">
+        <h1>Git</h1>
+        <p>Content</p>
+        <ul>
+            <li>Deamon based</li>
+            <li>On port 9418</li>
+            <li>Read Only</li>
+        </ul>
+    </div>
+    <div id="hooks">
+        <h1><a href="https://git-scm.com/docs/githooks">Hooks</a></h1>
+        <p>Scripts in hooks directory, fired on the lifecycle events.</p>
+        <ul>
+            <li>Not not versioned</li>
+            <li>Every repository can have its own</li>
+        </ul>
+    </div>
+    <div id="gitignore">
+        <h1>.gitignore</h1>
+        <p>Lists files to be ignored by git</p>
+    </div>
+    <div id="hosting">
+        <h1>Hosting</h1>
+        <p>Content</p>
+        <ul>
+            <li><a href="https://github.com/">Github</a> </li>
+            <li><a href="https://bitbucket.org/">Bitbucket</a> </li>
+            <li><a href="https://hub.jazz.net/create">JazzHub</a> </li>
+            <li>...</li>
+        </ul>
+    </div>
+    <div id="id">
+        <h1>References</h1>
+        <ul>
+            <li><a href="https://git-scm.com/book/en/v2">Git Book</a></li>
+            <li><a href="https://git-scm.com/docs">Git Reference</a></li>
+            <li><a href="https://www.atlassian.com/git/tutorials/">Atlassian tuturials</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
