@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Git Crash Course - Exercise</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+</head>
+
+<body>
+
+    <div id="setup">
+        <h1>Setup</h1>
+        <ul>
+
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#configiuration">Configuration</a></li>
+            <li><a href="#clone">Clone</a></li>
+        </ul>
+    </div>
+
+    <div id="installation">
+        <h2>Installation</h2>
+        <ul>
+            <li>deb - <code>apt-get install git</code> </li>
+            <li>rpm - <code>yum install git</code></li>
+            <li>Windows - <a href="https://git-scm.com/download/win">Download</a> and install</li>
+            <li>Mac - <a href="https://git-scm.com/download/mac">Download</a> and install</li>
+        </ul>
+    </div>
+
+    <div id="configiuration">
+        <h2><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">Configuration</a></h2>
+        <ul>
+            <li><code>git config --global user.name ${your user name}</code> - set your username for commits</li>
+            <li><code>git config --global user.email ${your email}</code> - set your email for commits</li>
+            <li><code>git config --global core.editor ${default editor, like vi, nano ...}</code> - set editor used to edit commit messages</li>
+            <li><code>git config --global push.default simple</code> - set simple push mode - to prevent git from nagging on every push</li>
+            <li><code>git config --global credential.helper cache</code> - make git remember your credentials for few minutes instead of asking each time </li>
+        </ul>
+
+    </div>
+    <div id="clone">
+        <h2>Clone</h2>
+        <ul>
+            <li><code>cd ${working directory}</code> - move to place where you plan to clone repository</li>
+            <li><code>git clone https://hub.jazz.net/git/AGrzes/git-workshop1</code> - clone workshop repository into git-workshop1 subdirectory</li>
+        </ul>
+    </div>
+    <div id="basic">
+        <h1>Basic Excrises</h1>
+        <ul>
+            <li><a href="#add">Add a file </a></li>
+            <li><a href="#modify">Modify a file</a></li>
+            <li><a href="#revert">Revert a change</a></li>
+            <li><a href="#revert2">Revert once again </a></li>
+            <li><a href="#revert3">And again </a></li>
+
+        </ul>
+    </div>
+    <div id="add">
+        <h2>Add a file </h2>
+        <ul>
+            <li><code>echo "Hello Git!" > hello.${your name}</code> - create your own file</li>
+            <li><code>git add hello.${your name}</code> - add file to index</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git commit -m "My first commit"</code> - commit</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="modify">
+        <h2>Modify a file </h2>
+        <ul>
+            <li><code>echo "Goodbye Git :(" > hello.${your name}</code> - change the file content</li>
+            <li><code>git diff hello.${your name}</code> - add file to index</li>
+            <li><code>git add hello.${your name}</code> - add change to index</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git commit -m "Second commit"</code> - commit</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="revert">
+        <h2>Revert a change </h2>
+        <ul>
+            <li><code>git checkout HEAD~1 hello.${your name}</code> - get the previous version of the file</li>
+            <li><code>cat hello.${your name}</code> - see the file content</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git add hello.${your name}</code> - add change to index</li>
+            <li><code>git commit -m "Reverse second commit"</code> - commit</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+
+    <div id="revert2">
+        <h2>Revert once again </h2>
+        <ul>
+            <li><code>git revert HEAD </code> - revert the last commit</li>
+            <li><code>cat hello.${your name}</code> - see the file content</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="revert3">
+        <h2>And again </h2>
+        <ul>
+            <li><code>git reset --hard HEAD~1</code> - rewind history discarding last commit</li>
+            <li><code>cat hello.${your name}</code> - see the file content</li>
+            <li><code>git status</code> - check work status</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+
+
+    <div id="synchronize">
+        <h1>Synchronize</h1>
+        <ul>
+            <li><a href="#pull">Pull</a></li>
+            <li><a href="#push">Push</a></li>
+            <li><a href="#fetch">Fetch</a></li>
+            <li><a href="#merge">Merge</a></li>
+        </ul>
+    </div>
+    <div id="pull">
+        <h1>Pull</h1>
+        <ul>
+            <li><code>git pull --rebase</code> - get the changes from remote repository and apply own changes on top of them</li>
+            <li><code>ll</code> - see pulled changes</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="push">
+        <h1>push</h1>
+        <ul>
+            <li><code>git push </code> - share the changes with remote repository</li>
+            <li>If failed repeat pull</li>
+        </ul>
+    </div>
+
+    <div id="fetch">
+        <h1>Fetch</h1>
+        <ul>
+            <li><code>git fetch</code> - get the changes from remote repository without merging them with your work</li>
+            <li><code>git log master origin/master --oneline --graph  --decorate</code> - see log of local and remote work</li>
+        </ul>
+    </div>
+    <div id="merge">
+        <h1>Merge</h1>
+        <ul>
+            <li><code>git merge origin/master</code> - apply own changes on top of remote changes</li>
+        </ul>
+    </div>
+    <div id="branching">
+        <h1>Branching</h1>
+        <ul>
+            <li><a href="#branch">Branch</a></li>
+            <li><a href="#rebase">Rebase</a></li>
+            <li><a href="#rewrite">Rewrite History</a></li>
+            <li><a href="#merge2">Merge Changes</a></li>
+        </ul>
+    </div>
+    <div id="branch">
+        <h1>Branch</h1>
+        <ul>
+            <li><code>git branch fix</code> - create branch fix from master</li>
+            <li><code>git checkout fix</code> - switch to branch fix</li>
+            <li><code>echo "${your name}.1" >> shared</code> - change the file content</li>
+            <li><code>git commit -a -m "Fix 1"</code> - commit</li>
+            <li><code>echo "${your name}.2" >> shared</code> - change the file content</li>
+            <li><code>git commit -a -m "Fix 2"</code> - commit</li>
+            <li><code>echo "${your name}.3" >> shared</code> - change the file content</li>
+            <li><code>git commit -a -m "Fix 3"</code> - commit</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="rebase">
+        <h1>Rebase</h1>
+        <ul>
+            <li><code>git checkout master</code> - switch back to branch master</li>
+            <li><code>git pull --rebase</code> - get the changes from remote repository and apply own changes on top of them</li>
+            <li><code>git checkout fix</code> - switch to branch fix</li>
+            <li><code>git rebase master</code> - apply fix changes on top of master branch</li>
+            <li><code>${editor} shared</code> - resolve conflict</li>
+            <li><code>git add shared</code> - mark as resolved<</li>
+            <li><code>git rebase --continue</code> - finish rebase</li>
+            <li><code>cat shared</code> - see resulting file</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="rewrite">
+        <h1><a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History">Rewrite History</a></h1>
+        <ul>
+            <li><code>git rebase -i master</code> - rewrite branch history from divergence point</li>
+            <li>reword first commit and fixup the next two</li>
+            <li><code>git commit --amend -m "I did it in one go"</code> - amend commit message</li>
+            <li><code>git rebase --continue</code> - finish rebase</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+    <div id="merge2">
+        <h1>Merge Changes</h1>
+        <ul>
+            <li><code>git checkout master</code> - switch back to branch master</li>
+            <li><code>git pull --rebase</code> - get the changes from remote repository and apply own changes on top of them</li>
+            <li><code>git merge fix</code> - merge fix changes to the master branch</li>
+            <li><code>${editor} shared</code> - resolve conflict</li>
+            <li><code>git add shared</code> - mark as resolved</li>
+            <li><code>git commit</code> - finish rebase</li>
+            <li><code>cat shared</code> - see resulting file</li>
+            <li><code>git push </code> - share the changes with remote repository</li>
+            <li>If failed repeat pull and resolve conflicts</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+        </ul>
+    </div>
+</body>
+
+</html>
