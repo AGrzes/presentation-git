@@ -10,8 +10,8 @@
 
 <body>
 
-    <div>
-        <div id="git">
+    <div id="impress">
+        <div id="git" class="step" data-x="0" data-y="0">
             <h1>Git</h1>
             <p>Distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows.</p>
             <ul>
@@ -19,7 +19,7 @@
                 <li><a href="exercise.html">Exercise</a></li>
             </ul>
         </div>
-        <div id="background">
+        <div id="background" class="step" data-x="1000" data-y="0">
             <h1>Background</h1>
             <ul>
                 <li>Created by Linus Torvalds and linux kernel developers in 2005 </li>
@@ -27,7 +27,7 @@
                 <li><a href="https://opensource.org/licenses/MIT">MIT</a> license</li>
             </ul>
         </div>
-        <div id="advantages">
+        <div id="advantages" class="step" data-x="2000" data-y="0">
             <h1>Advantages</h1>
             <p>Content</p>
             <ul>
@@ -39,7 +39,7 @@
                 <li>Popular</li>
             </ul>
         </div>
-        <div id="distributed">
+        <div id="distributed" class="step" data-x="3000" data-y="1000">
             <h1>Distributed</h1>
             <ul>
                 <li>No need for central server</li>
@@ -48,7 +48,7 @@
                 <li>Various workflows possible</li>
             </ul>
         </div>
-        <div id="usage">
+        <div id="usage" class="step" data-x="3000" data-y="0">
             <h1>Usage</h1>
             <ul>
                 <li>Local version tracking</li>
@@ -58,7 +58,7 @@
                 <li>Cloud deployment</li>
             </ul>
         </div>
-        <div id="caevats">
+        <div id="caevats" class="step" data-x="4000" data-y="0">
             <h1>Caveats</h1>
             <ul>
                 <li>Binary file handling</li>
@@ -66,54 +66,59 @@
                 <li>No locking</li>
             </ul>
         </div>
-        <div id="basic_terms">
+        <div id="basic_terms" class="step" data-x="1000" data-y="1000">
             <h1>Basic Terms</h1>
             <ul>
                 <li>Repository - a structure tracking version history</li>
                 <li>Work Tree - local directory when work is performed</li>
                 <li>Index / Staging Area - a group of changes prepared for next commit</li>
                 <li>Commit - a snapshot of work tree with metadata and referencing ancestors or an operation of creating such snapshot</li>
+                <li>Pull - operation of getting changes from another repository </li>
+                <li>Push - operation of putting changes to another repository </li>
+            </ul>
+        </div>
+        <div id="basic_terms2" class="step" data-x="2000" data-y="1000">
+            <h1>Basic Terms - continued</h1>
+            <ul>
                 <li>Reference - pointer to a commit</li>
                 <li>Branch - pointer to last commit in the work stream</li>
                 <li>Tag - optionally signed pointer to a commit</li>
                 <li>HEAD - pointer to the tip of current branch</li>
                 <li>Remote - reference to another repository</li>
-                <li>Pull - operation of getting changes from another repository </li>
-                <li>Push - operation of putting changes to another repository </li>
             </ul>
         </div>
-        <div id="config">
+        <div id="config" class="step" data-x="1000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-config">Config</a></h1>
             <p>Get and set repository or global options</p>
             <p>Scopes: system, global and local</p>
         </div>
-        <div id="clone">
+        <div id="clone" class="step" data-x="2000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-clone">Clone</a></h1>
             <p>Clone a repository into a new directory</p>
         </div>
-        <div id="init">
+        <div id="init" class="step" data-x="3000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-init">Init</a></h1>
             <p>Create an empty Git repository or reinitialize an existing one</p>
             <ul>
                 <li>--bare - create bare repository - without working directory</li>
             </ul>
         </div>
-        <div id="add">
+        <div id="add" class="step" data-x="4000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-add">Add</a></h1>
             <p>Add file contents to the index</p>
             <ul>
                 <li>--patch - select changes to add</li>
             </ul>
         </div>
-        <div id="rm">
+        <div id="rm" class="step" data-x="5000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-rm">Rm</a></h1>
             <p>Remove files from the working tree and from the index</p>
         </div>
-        <div id="mv">
+        <div id="mv" class="step" data-x="6000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-mv">Mv</a></h1>
             <p>Move or rename a file, a directory, or a symlink</p>
         </div>
-        <div id="commit">
+        <div id="commit" class="step" data-x="7000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-commit">Commit</a></h1>
             <p>Record changes to the repository</p>
             <ul>
@@ -121,14 +126,14 @@
                 <li>--amend - replace last commit with new commit</li>
             </ul>
         </div>
-        <div id="push">
+        <div id="push" class="step" data-x="8000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-push">Push</a></h1>
             <p>Update remote refs along with associated objects</p>
             <ul>
                 <li>--force - rewrite remote history</li>
             </ul>
         </div>
-        <div id="pull">
+        <div id="pull" class="step" data-x="9000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-pull">Pull</a></h1>
             <p>Fetch from and integrate with another repository or a local branch</p>
             <ul>
@@ -136,38 +141,38 @@
                 <li>--rebase - rebase current branch onto incoming changes</li>
             </ul>
         </div>
-        <div id="fetch">
+        <div id="fetch" class="step" data-x="10000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-fetch">Fetch</a></h1>
             <p>Download objects and refs from another repository</p>
         </div>
-        <div id="merge">
+        <div id="merge" class="step" data-x="11000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-merge">Merge</a></h1>
             <p>Join two or more development histories together</p>
             <ul>
                 <li>--ff-only - perform merge only if it is fast forward</li>
             </ul>
         </div>
-        <div id="rebase">
+        <div id="rebase" class="step" data-x="12000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-rebase">Rebase</a></h1>
             <p>Reapply commits on top of another base tip</p>
         </div>
-        <div id="reset">
+        <div id="reset" class="step" data-x="13000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-reset">Reset</a></h1>
             <p>Reset current HEAD to the specified state</p>
         </div>
-        <div id="remote">
+        <div id="remote" class="step" data-x="14000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-remote">Remote</a></h1>
             <p>Manage set of tracked repositories</p>
         </div>
-        <div id="branch">
+        <div id="branch" class="step" data-x="15000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-branch">Branch</a></h1>
             <p>List, create, or delete branches</p>
         </div>
-        <div id="checkout">
+        <div id="checkout" class="step" data-x="16000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-checkout">Checkout</a></h1>
             <p>Switch branches or restore working tree files</p>
         </div>
-        <div id="log">
+        <div id="log" class="step" data-x="17000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-log">Log</a></h1>
             <p>Show commit logs</p>
             <ul>
@@ -176,116 +181,169 @@
                 <li>--decorate - Show refs on commits</li>
             </ul>
         </div>
-        <div id="status">
+        <div id="status" class="step" data-x="18000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-status">Status</a></h1>
             <p>Show the working tree status</p>
         </div>
-        <div id="diff">
+        <div id="diff" class="step" data-x="19000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-diff">Diff</a></h1>
             <p>Show changes between commits, commit and working tree, etc</p>
         </div>
-    </div>
-    <div id="object">
-        <h1>Object</h1>
-        <p>A chunk of data stored by git identified by hash </p>
-        <ul>
-            <li>Blob - file content snapshoot</li>
-            <li>Tree - a file structure snapshoot referencing blobs</li>
-            <li>Commit - commit metadata referencing a tree</li>
-            <li>Tag - A reference to commit</li>
-        </ul>
-    </div>
+        <div id="object" class="step" data-x="1000" data-y="3000">
+            <h1>Object</h1>
+            <p>A chunk of data stored by git identified by hash </p>
+            <ul>
+                <li>Blob - file content snapshoot</li>
+                <li>Tree - a file structure snapshoot referencing blobs</li>
+                <li>Commit - commit metadata referencing a tree</li>
+                <li>Tag - A reference to commit</li>
+            </ul>
+        </div>
 
-    <div id="protocols">
-        <h1>Protocols</h1>
-        <ul>
-            <li>Local</li>
-            <li>Dumb Http</li>
-            <li>Smart Http</li>
-            <li>SSH</li>
-            <li>Git</li>
-        </ul>
-    </div>
+        <div id="protocols" class="step" data-x="2000" data-y="3000">
+            <h1>Protocols</h1>
+            <ul>
+                <li>Local</li>
+                <li>Dumb Http</li>
+                <li>Smart Http</li>
+                <li>SSH</li>
+                <li>Git</li>
+            </ul>
+        </div>
 
-    <div id="protocols-dumb-http">
-        <h1>Dumb Http</h1>
-        <ul>
-            <li>Enable default post-update hook</li>
-            <li>Serve repository from HTTP server</li>
-            <li>Read Only</li>
+        <div id="protocols-dumb-http" class="step" data-x="3000" data-y="4000">
+            <h1>Dumb Http</h1>
+            <ul>
+                <li>Enable default post-update hook</li>
+                <li>Serve repository from HTTP server</li>
+                <li>Read Only</li>
 
-        </ul>
-    </div>
+            </ul>
+        </div>
 
-    <div id="protocols-smart-http">
-        <h1>Smart Http</h1>
-        <p>Content</p>
-        <ul>
-            <li>CGI Based</li>
-            <li>Read / Write</li>
-        </ul>
-    </div>
+        <div id="protocols-smart-http" class="step" data-x="4000" data-y="4000">
+            <h1>Smart Http</h1>
+            <p>Content</p>
+            <ul>
+                <li>CGI Based</li>
+                <li>Read / Write</li>
+            </ul>
+        </div>
 
-    <div id="protocols-ssh">
-        <h1>SSH</h1>
-        <ul>
-            <li>Give user SSH access to server with repository</li>
-            <li>Read / Write</li>
-        </ul>
-    </div>
-    <div id="protocols-git">
-        <h1>Git</h1>
-        <p>Content</p>
-        <ul>
-            <li>Deamon based</li>
-            <li>On port 9418</li>
-            <li>Read Only</li>
-        </ul>
-    </div>
-    <div id="hooks">
-        <h1><a href="https://git-scm.com/docs/githooks">Hooks</a></h1>
-        <p>Scripts in hooks directory, fired on the lifecycle events.</p>
-        <ul>
-            <li>Not not versioned</li>
-            <li>Every repository can have its own</li>
-        </ul>
-    </div>
-    <div id="back">
-        <h1><a href="https://git-scm.com/docs/gitrevisions">Going back in history</a></h1>
-        <ul>
-            <li>Ref^x - x-th parent of commit pointed by Ref</li>
-            <li>Ref^ - 1-st parent of commit pointed by Ref</li>
-            <li>Ref^^ - 1-st parent of 1-st parent of commit pointed by Ref</li>
-            <li>...</li>
-            <li>Ref~x - x-th level ancestor of commit pointed by Ref (following only the first parents)</li>
-        </ul>
-    </div>
-    <div id="gitignore">
-        <h1>.gitignore</h1>
-        <p>Lists files to be ignored by git</p>
-    </div>
-    <div id="hosting">
-        <h1>Hosting</h1>
-        <p>Content</p>
-        <ul>
-            <li><a href="https://github.com/">Github</a> </li>
-            <li><a href="https://bitbucket.org/">Bitbucket</a> </li>
-            <li><a href="https://hub.jazz.net/create">JazzHub</a> </li>
-            <li>...</li>
-        </ul>
-    </div>
-    <div id="manners">
-        <h1>Thou shalt not rewrite shared history(unless you have good reason to do this)</h1>
-    </div>
-    <div id="id">
-        <h1>References</h1>
-        <ul>
-            <li><a href="https://git-scm.com/book/en/v2">Git Book</a></li>
-            <li><a href="https://git-scm.com/docs">Git Reference</a></li>
-            <li><a href="https://www.atlassian.com/git/tutorials/">Atlassian tutorials</a></li>
-        </ul>
-    </div>
+        <div id="protocols-ssh" class="step" data-x="5000" data-y="4000">
+            <h1>SSH</h1>
+            <ul>
+                <li>Give user SSH access to server with repository</li>
+                <li>Read / Write</li>
+            </ul>
+        </div>
+        <div id="protocols-git" class="step" data-x="6000" data-y="4000">
+            <h1>Git</h1>
+            <p>Content</p>
+            <ul>
+                <li>Deamon based</li>
+                <li>On port 9418</li>
+                <li>Read Only</li>
+            </ul>
+        </div>
+        <div id="hooks" class="step" data-x="3000" data-y="3000">
+            <h1><a href="https://git-scm.com/docs/githooks">Hooks</a></h1>
+            <p>Scripts in hooks directory, fired on the lifecycle events.</p>
+            <ul>
+                <li>Not not versioned</li>
+                <li>Every repository can have its own</li>
+            </ul>
+        </div>
+        <div id="back" class="step" data-x="4000" data-y="3000">
+            <h1><a href="https://git-scm.com/docs/gitrevisions">Going back in history</a></h1>
+            <ul>
+                <li>Ref^x - x-th parent of commit pointed by Ref</li>
+                <li>Ref^ - 1-st parent of commit pointed by Ref</li>
+                <li>Ref^^ - 1-st parent of 1-st parent of commit pointed by Ref</li>
+                <li>...</li>
+                <li>Ref~x - x-th level ancestor of commit pointed by Ref (following only the first parents)</li>
+            </ul>
+        </div>
+        <div id="gitignore" class="step" data-x="5000" data-y="3000">
+            <h1>.gitignore</h1>
+            <p>Lists files to be ignored by git</p>
+        </div>
+        <div id="hosting" class="step" data-x="6000" data-y="3000">
+            <h1>Hosting</h1>
+            <p>Content</p>
+            <ul>
+                <li><a href="https://github.com/">Github</a> </li>
+                <li><a href="https://bitbucket.org/">Bitbucket</a> </li>
+                <li><a href="https://hub.jazz.net/create">JazzHub</a> </li>
+                <li>...</li>
+            </ul>
+        </div>
+        <div id="manners" class="step" data-x="7000" data-y="3000">
+            <h1>Thou shalt not rewrite shared history(unless you have good reason to do this)</h1>
+        </div>
+        <div id="references" class="step" data-x="8000" data-y="3000">
+            <h1>References</h1>
+            <ul>
+                <li><a href="https://git-scm.com/book/en/v2">Git Book</a></li>
+                <li><a href="https://git-scm.com/docs">Git Reference</a></li>
+                <li><a href="https://www.atlassian.com/git/tutorials/">Atlassian tutorials</a></li>
+            </ul>
+        </div>
+        <div id="overview" class="step" data-x="9000" data-y="2000" data-scale="12">
+        </div>
 
+        <svg height="5000" width="20000" style="shape-rendering: geometricPrecision; position:relative;top:-150px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="6" orient="auto">
+                    <path d="M2,2 L2,11 L10,6 L2,2" style="fill: #413932;" />
+                </marker>
+            </defs>
+            <path d="M300,150 L680,150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M1300,150 L1680,150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M2300,300 L2700,990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M2300,150 L2680,150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M3300,150 L3680,150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M300,300 L700,990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M1300,1150 L1680,1150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M300,300 L700,1990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M1300,2150 L1680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M2300,2150 L2680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M3300,2150 L3680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M4300,2150 L4680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M5300,2150 L5680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M6300,2150 L6680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M7300,2150 L7680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M8300,2150 L8680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M9300,2150 L9680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M10300,2150 L10680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M11300,2150 L11680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M12300,2150 L12680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M13300,2150 L13680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M14300,2150 L14680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M15300,2150 L15680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M16300,2150 L16680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M17300,2150 L17680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M18300,2150 L18680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+
+            <path d="M300,300 L700,2990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M1300,3150 L1680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M2300,3150 L2680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M3300,3150 L3680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M4300,3150 L4680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M5300,3150 L5680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M6300,3150 L6680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M7300,3150 L7680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+
+            <path d="M2300,3300 L2700,3990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M3300,4150 L3680,4150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M4300,4150 L4680,4150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M5300,4150 L5680,4150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+        </svg>
+    </div>
+    <script src="impress.js"></script>
+    <script>
+        impress().init();
+    </script>
 </body>
 
 </html>

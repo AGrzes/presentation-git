@@ -1,0 +1,38 @@
+.step {
+    height: 300px;
+    width: 600px;
+    border: solid #413932 2px;
+    border-radius:20px;
+    background-color: #fcfcfa;
+    box-sizing:border-box;
+}
+
+#overview{
+    border: none;
+    background-color:transparent;
+}
+
+h1,h2 {
+    border-bottom:solid #413932 2px;
+    color: #f14e32;
+    text-align:center;
+    padding-bottom:10px;
+}
+
+#manners h1 {
+    border-bottom: none;
+}
+.step::after{
+    content: ''<div class="arrow"><span class="head"></span></div>''
+}
+
+.step p {
+    margin-left:20px;
+}
+.step ul {
+    margin-left:20px;
+}
+a {
+    color: #0388a6;
+    text-decoration: none;
+}
