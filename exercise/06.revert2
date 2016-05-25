@@ -1,0 +1,4 @@
+    git revert HEAD
+    cat hello.$USER_NAME 
+    git status
+    git log --oneline --graph --decorate

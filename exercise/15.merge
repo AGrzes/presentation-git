@@ -1,0 +1,10 @@
+    git checkout master
+    git pull --rebase
+    git merge fix
+    $EDITOR shared
+    git add shared
+    git commit
+    cat shared
+    git push
+If failed repeat pull and resolve conflicts
+    git log --oneline --graph --decorate

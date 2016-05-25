@@ -1,0 +1,9 @@
+    git checkout master
+    git pull --rebase
+    git checkout fix
+    git rebase master
+    $EDITOR shared
+    git add shared
+    git rebase --continue
+    cat shared
+    git log --oneline --graph --decorate

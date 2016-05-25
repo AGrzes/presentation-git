@@ -1,0 +1,4 @@
+    git reset --hard HEAD~1
+    cat hello.$USER_NAME
+    git status
+    git log --oneline --graph --decorate

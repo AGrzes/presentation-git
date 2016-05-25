@@ -1,0 +1,7 @@
+    git checkout HEAD~1 hello.$USER_NAME
+    cat hello.$USER_NAME
+    git status
+    git add hello.$USER_NAME
+    git commit -m "Reverse second commit"
+    git status
+    git log --oneline --graph --decorate

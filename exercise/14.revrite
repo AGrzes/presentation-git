@@ -1,0 +1,5 @@
+    git rebase -i master
+reword first commit and fixup the next two
+    git commit --amend -m "I did it in one go"
+    git rebase --continue
+    git log --oneline --graph --decorate

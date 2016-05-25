@@ -1,0 +1,8 @@
+deb
+    apt-get install git
+rpm
+    yum install git
+Windows
+    https://git-scm.com/download/win
+Mac
+    https://git-scm.com/download/mac

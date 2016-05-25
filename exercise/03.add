@@ -1,0 +1,6 @@
+    echo "Hello Git!" > hello.$USER_NAME
+    git add hello.$USER_NAME
+    git status
+    git commit -m "My first commit"
+    git status -
+    git log --oneline --graph --decorate

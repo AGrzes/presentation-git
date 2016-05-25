@@ -1,0 +1,8 @@
+    export USER_NAME=<user name>
+    export EDITOR=<editor>
+
+    git config --global user.name $USER_NAME
+    git config --global user.email <user email>
+    git config --global core.editor $EDITOR
+    git config --global push.default simple
+    git config --global credential.helper cache

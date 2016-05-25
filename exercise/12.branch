@@ -1,0 +1,9 @@
+    git branch fix
+    git checkout fix
+    echo "$USER_NAME.1" >> shared
+    git commit -a -m "Fix 1"
+    echo "$USER_NAME.2" >> shared
+    git commit -a -m "Fix 2"
+    echo "$USER_NAME.3" >> shared 
+    git commit -a -m "Fix 3"
+    git log --oneline --graph --decorate - see log

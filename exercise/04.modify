@@ -1,0 +1,7 @@
+    echo "Goodbye Git :(" > hello.$USER_NAME
+    git diff hello.$USER_NAME
+    git add hello.$USER_NAME
+    git status
+    git commit -m "Second commit"
+    git status
+    git log --oneline --graph --decorate
