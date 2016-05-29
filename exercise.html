@@ -36,8 +36,8 @@
             <li><code>git config --global user.name ${your user name}</code> - set your username for commits</li>
             <li><code>git config --global user.email ${your email}</code> - set your email for commits</li>
             <li><code>git config --global core.editor ${default editor, like vi, nano ...}</code> - set editor used to edit commit messages</li>
-            <li><code>git config --global push.default simple</code> - set simple push mode - to prevent git from nagging on every push</li>
-            <li><code>git config --global credential.helper cache</code> - make git remember your credentials for few minutes instead of asking each time </li>
+            <li><i>optional</i><code>git config --global push.default simple</code> - set simple push mode - to prevent git from nagging on every push</li>
+            <li><i>optional</i><code>git config --global credential.helper cache</code> - make git remember your credentials for few minutes instead of asking each time </li>
         </ul>
 
     </div>
@@ -62,36 +62,36 @@
     <div id="add">
         <h2>Add a file </h2>
         <ul>
-            <li><code>echo "Hello Git!" > hello.${your name}</code> - create your own file</li>
+            <li><code>echo "Hello Git" > hello.${your name}</code> - create your own file</li>
             <li><code>git add hello.${your name}</code> - add file to index</li>
-            <li><code>git status</code> - check work status</li>
+            <li><code>git status</code> - check work status - it should show file ready to be commited</li>
             <li><code>git commit -m "My first commit"</code> - commit</li>
-            <li><code>git status</code> - check work status</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git status</code> - check work status - it should show no changes pending</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - it should show your firs commit</li>
         </ul>
     </div>
     <div id="modify">
         <h2>Modify a file </h2>
         <ul>
             <li><code>echo "Goodbye Git :(" > hello.${your name}</code> - change the file content</li>
-            <li><code>git diff hello.${your name}</code> - add file to index</li>
+            <li><code>git diff hello.${your name}</code> - see the changes in file</li>
             <li><code>git add hello.${your name}</code> - add change to index</li>
-            <li><code>git status</code> - check work status</li>
+            <li><code>git status</code> - check work status - it should show change ready to be commited</li>
             <li><code>git commit -m "Second commit"</code> - commit</li>
-            <li><code>git status</code> - check work status</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git status</code> - check work status - it should show no changes pending</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - it should show two commits</li>
         </ul>
     </div>
     <div id="revert">
         <h2>Revert a change </h2>
         <ul>
             <li><code>git checkout HEAD~1 hello.${your name}</code> - get the previous version of the file</li>
-            <li><code>cat hello.${your name}</code> - see the file content</li>
-            <li><code>git status</code> - check work status</li>
+            <li><code>cat hello.${your name}</code> - see the file content - it should be "Hello Git"</li>
+            <li><code>git status</code> - check work status - it should show change in hello.${your name} ready to be commited</li>
             <li><code>git add hello.${your name}</code> - add change to index</li>
             <li><code>git commit -m "Reverse second commit"</code> - commit</li>
-            <li><code>git status</code> - check work status</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git status</code> - check work status  - it should show no changes pending</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - it should show three commits - last one reverting the second one</li>
         </ul>
     </div>
 
@@ -99,18 +99,18 @@
         <h2>Revert once again </h2>
         <ul>
             <li><code>git revert HEAD </code> - revert the last commit</li>
-            <li><code>cat hello.${your name}</code> - see the file content</li>
-            <li><code>git status</code> - check work status</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>cat hello.${your name}</code> - see the file content - it should be "Goodbye Git :("</li>
+            <li><code>git status</code> - check work status - it should show no changes pending</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - it should show three commits - last one reverting the third one</li>
         </ul>
     </div>
     <div id="revert3">
         <h2>And again </h2>
         <ul>
             <li><code>git reset --hard HEAD~1</code> - rewind history discarding last commit</li>
-            <li><code>cat hello.${your name}</code> - see the file content</li>
-            <li><code>git status</code> - check work status</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>cat hello.${your name}</code> - see the file content - it should be "Hello Git"</li>
+            <li><code>git status</code> - check work status - it should show no changes pending</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - it should show three commits - we discarded last one</li>
         </ul>
     </div>
 
@@ -128,8 +128,8 @@
         <h1>Pull</h1>
         <ul>
             <li><code>git pull --rebase</code> - get the changes from remote repository and apply own changes on top of them</li>
-            <li><code>ll</code> - see pulled changes</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>ll</code> - see pulled changes - the files added by others should be there</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - it should show all remote histroy with your chenges at the end</li>
         </ul>
     </div>
     <div id="push">
@@ -144,7 +144,7 @@
         <h1>Fetch</h1>
         <ul>
             <li><code>git fetch</code> - get the changes from remote repository without merging them with your work</li>
-            <li><code>git log master origin/master --oneline --graph  --decorate</code> - see log of local and remote work</li>
+            <li><code>git log master origin/master --oneline --graph  --decorate</code> - see log of local and remote work - notice the point where branches diverged</li>
         </ul>
     </div>
     <div id="merge">
@@ -173,7 +173,7 @@
             <li><code>git commit -a -m "Fix 2"</code> - commit</li>
             <li><code>echo "${your name}.3" >> shared</code> - change the file content</li>
             <li><code>git commit -a -m "Fix 3"</code> - commit</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - you should have three commits in fix branch on top of master histroy untill the point of branch</li>
         </ul>
     </div>
     <div id="rebase">
@@ -187,7 +187,7 @@
             <li><code>git add shared</code> - mark as resolved<</li>
             <li><code>git rebase --continue</code> - finish rebase</li>
             <li><code>cat shared</code> - see resulting file</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - you should have three commits in fix branch on top of the latest master</li>
         </ul>
     </div>
     <div id="rewrite">
@@ -197,7 +197,7 @@
             <li>reword first commit and fixup the next two</li>
             <li><code>git commit --amend -m "I did it in one go"</code> - amend commit message</li>
             <li><code>git rebase --continue</code> - finish rebase</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log  - you should have one commit in fix branch on top of the latest master </li>
         </ul>
     </div>
     <div id="merge2">
@@ -212,7 +212,7 @@
             <li><code>cat shared</code> - see resulting file</li>
             <li><code>git push </code> - share the changes with remote repository</li>
             <li>If failed repeat pull and resolve conflicts</li>
-            <li><code>git log --oneline --graph  --decorate</code> - see log</li>
+            <li><code>git log --oneline --graph  --decorate</code> - see log - you should have one commit in fix branch on top of the latest master  </li>
         </ul>
     </div>
 </body>
