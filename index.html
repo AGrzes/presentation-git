@@ -150,11 +150,15 @@
             <p>Join two or more development histories together</p>
             <ul>
                 <li>--ff-only - perform merge only if it is fast forward</li>
+                <li>--no-ff - always create merge commit</li>
             </ul>
         </div>
         <div id="rebase" class="step" data-x="12000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-rebase">Rebase</a></h1>
             <p>Reapply commits on top of another base tip</p>
+            <ul>
+                <li>--interactive - fine grained control of the process</li>
+            </ul>
         </div>
         <div id="reset" class="step" data-x="13000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-reset">Reset</a></h1>
@@ -188,6 +192,14 @@
         <div id="diff" class="step" data-x="19000" data-y="2000">
             <h1><a href="https://git-scm.com/docs/git-diff">Diff</a></h1>
             <p>Show changes between commits, commit and working tree, etc</p>
+        </div>
+        <div id="difftool" class="step" data-x="20000" data-y="2000">
+            <h1><a href="https://git-scm.com/docs/git-diff">Diffftool</a></h1>
+            <p>Show changes between commits, commit and working tree, etc using interactive diff tool</p>
+        </div>
+        <div id="stash" class="step" data-x="21000" data-y="2000">
+            <h1><a href="https://git-scm.com/docs/git-stash">Stash</a></h1>
+            <p>Stash the changes in a dirty working directory away</p>
         </div>
         <div id="object" class="step" data-x="1000" data-y="3000">
             <h1>Object</h1>
@@ -270,18 +282,42 @@
         </div>
         <div id="hosting" class="step" data-x="6000" data-y="3000">
             <h1>Hosting</h1>
-            <p>Content</p>
             <ul>
                 <li><a href="https://github.com/">Github</a> </li>
                 <li><a href="https://bitbucket.org/">Bitbucket</a> </li>
-                <li><a href="https://hub.jazz.net/create">JazzHub</a> </li>
                 <li>...</li>
             </ul>
         </div>
-        <div id="manners" class="step" data-x="7000" data-y="3000">
+        <div id="submodules" class="step" data-x="7000" data-y="3000">
+            <h1><a href="https://git-scm.com/docs/gitsubmodules">Submodules</a></h1>
+            <p>Reference to another git repository inside git repository.</p>
+            <ul>
+                <li>Remote address</li>
+                <li>Reference to commit</li>
+                <li>Branch to follow</li>
+            </ul>
+        </div>
+        <div id="bundle" class="step" data-x="8000" data-y="3000">
+            <h1><a href="https://git-scm.com/docs/git-bundle">Bundle</a></h1>
+            <p>Pack set of commits and transfer it over any medium.</p>
+        </div>
+        <div id="gitflow" class="step" data-x="9000" data-y="3000">
+            <h1><a href="https://nvie.com/posts/a-successful-git-branching-model/">Gitflow</a></h1>
+            <p>A successful git branching model.</p>
+        </div>
+        <div id="manners" class="step" data-x="10000" data-y="3000">
             <h1>Thou shalt not rewrite shared history(unless you have good reason to do this)</h1>
         </div>
-        <div id="references" class="step" data-x="8000" data-y="3000">
+        <div id="commit-often" class="step" data-x="11000" data-y="3000">
+            <h1>Commit early and commit often</h1>
+        </div>
+        <div id="preserve-git" class="step" data-x="12000" data-y="3000">
+            <h1>Preserve .git directory.</h1>
+        </div>
+        <div id="dont-panic" class="step" data-x="13000" data-y="3000">
+            <h1>Don't Panic</h1>
+        </div>
+        <div id="references" class="step" data-x="14000" data-y="3000">
             <h1>References</h1>
             <ul>
                 <li><a href="https://git-scm.com/book/en/v2">Git Book</a></li>
@@ -289,10 +325,10 @@
                 <li><a href="https://www.atlassian.com/git/tutorials/">Atlassian tutorials</a></li>
             </ul>
         </div>
-        <div id="overview" class="step" data-x="9000" data-y="2000" data-scale="12">
+        <div id="overview" class="step" data-x="10500" data-y="2000" data-scale="12">
         </div>
 
-        <svg height="5000" width="20000" style="shape-rendering: geometricPrecision; position:relative;top:-150px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <svg height="5000" width="22000" style="shape-rendering: geometricPrecision; position:relative;top:-150px" xmlns="http://www.w3.org/2000/svg" version="1.1">
             <defs>
                 <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="6" orient="auto">
                     <path d="M2,2 L2,11 L10,6 L2,2" style="fill: #413932;" />
@@ -324,6 +360,8 @@
             <path d="M16300,2150 L16680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
             <path d="M17300,2150 L17680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
             <path d="M18300,2150 L18680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M19300,2150 L19680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M20300,2150 L20680,2150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
 
             <path d="M300,300 L700,2990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
             <path d="M1300,3150 L1680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
@@ -333,6 +371,12 @@
             <path d="M5300,3150 L5680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
             <path d="M6300,3150 L6680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
             <path d="M7300,3150 L7680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M8300,3150 L8680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M9300,3150 L9680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M10300,3150 L10680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M11300,3150 L11680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M12300,3150 L12680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
+            <path d="M13300,3150 L13680,3150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
 
             <path d="M2300,3300 L2700,3990" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />
             <path d="M3300,4150 L3680,4150" style="stroke: #413932; stroke-width: 2px; fill: none;marker-end: url(#markerArrow);" />

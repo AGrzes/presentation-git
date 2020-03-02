@@ -19,7 +19,7 @@ h1,h2 {
     padding-bottom:10px;
 }
 
-#manners h1 {
+#manners h1, #commit-often h1, #preserve-git h1, #dont-panic h1{
     border-bottom: none;
 }
 .step::after{
